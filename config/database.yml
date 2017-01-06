@@ -23,6 +23,10 @@ default: &default
 
 development:
   <<: *default
+  host: localhost
+  port: 5432
+  username: designmail
+  password: designmail
   database: designmail_development
 
   # The specified database role being used to connect to postgres.
