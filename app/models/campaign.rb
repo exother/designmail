@@ -5,8 +5,8 @@ class Campaign < ApplicationRecord
   after_create :generate_campaign_mails
 
   def generate_campaign_mails
-    Mail.all.each do |mail|
-      CampaignMail.create campaign_id: self.id, mail_id: mail.id, status: 0
+    Email.all.each do |email|
+      CampaignMail.create campaign_id: self.id, email_id: email.id, status: 0
     end
   end
 end

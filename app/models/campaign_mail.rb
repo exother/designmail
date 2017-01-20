@@ -1,4 +1,4 @@
 class CampaignMail < ApplicationRecord
   belongs_to :campaign
-  belongs_to :mail
+  belongs_to :email
 end

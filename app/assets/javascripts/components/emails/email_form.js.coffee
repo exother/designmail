@@ -1,18 +1,18 @@
-@MailForm = React.createClass
+@EmailForm = React.createClass
   getInitialState: ->
-    mail: ''
+    email: ''
 
   handleChange: (e) ->
     name = e.target.name
     @setState "#{ name }": e.target.value
 
   valid: ->
-    @state.mail
+    @state.email
 
   handleSubmit: (e) ->
     e.preventDefault()
-    $.post '', { mail: @state }, (data) =>
-      @props.handleNewMail data
+    $.post '', { email: @state }, (data) =>
+      @props.handleNewEmail data
       @setState @getInitialState()
     , 'JSON'
 
@@ -25,12 +25,12 @@
         React.DOM.input
           type: 'text'
           className: 'form-control'
-          placeholder: 'Mail'
-          name: 'mail'
-          value: @state.mail
+          placeholder: 'Email'
+          name: 'email'
+          value: @state.email
           onChange: @handleChange
       React.DOM.button
         type: 'submit'
         className: 'btn btn-primary'
         disabled: !@valid()
-        'Add mail'
+        'Add email'

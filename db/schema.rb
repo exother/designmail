@@ -35,8 +35,8 @@ ActiveRecord::Schema.define(version: 20170120013943) do
     t.index ["setting_id"], name: "index_campaigns_on_setting_id", using: :btree
   end
 
-  create_table "mails", force: :cascade do |t|
-    t.string   "mail"
+  create_table "emails", force: :cascade do |t|
+    t.string   "email"
     t.boolean  "active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
