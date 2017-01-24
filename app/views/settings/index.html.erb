@@ -1,3 +1,5 @@
-<%# app/views/settings/index.html.erb %>
+<% content_for :subtitle do %>
+  Settings
+<% end %>
 
 <%= react_component 'Settings', { data: @settings } %>

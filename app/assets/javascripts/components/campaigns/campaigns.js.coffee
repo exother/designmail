@@ -19,9 +19,6 @@
   render: ->
     React.DOM.div
       className: 'campaigns'
-      React.DOM.h2
-        className: 'title'
-        'Campaigns'
       React.createElement CampaignForm, settings: @props.settings, handleNewCampaign: @addCampaign
       React.DOM.hr null
       React.DOM.table

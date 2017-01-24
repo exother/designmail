@@ -19,9 +19,6 @@
   render: ->
     React.DOM.div
       className: 'emails'
-      React.DOM.h2
-        className: 'title'
-        'Emails'
       React.createElement EmailForm, handleNewEmail: @addEmail
       React.DOM.hr null
       React.DOM.table

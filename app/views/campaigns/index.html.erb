@@ -1,3 +1,4 @@
-<%# app/views/campaigns/index.html.erb %>
-
+<% content_for :subtitle do %>
+  Campaigns
+<% end %>
 <%= react_component 'Campaigns', { data: @campaigns, settings: @settings } %>

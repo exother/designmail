@@ -19,9 +19,6 @@
   render: ->
     React.DOM.div
       className: 'settings'
-      React.DOM.h2
-        className: 'title'
-        'Settings'
       React.createElement SettingForm, handleNewSetting: @addSetting
       React.DOM.hr null
       React.DOM.table

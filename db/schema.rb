@@ -17,12 +17,12 @@ ActiveRecord::Schema.define(version: 20170120013943) do
 
   create_table "campaign_mails", force: :cascade do |t|
     t.integer  "campaign_id"
-    t.integer  "mail_id"
+    t.integer  "email_id"
     t.integer  "status"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.index ["campaign_id"], name: "index_campaign_mails_on_campaign_id", using: :btree
-    t.index ["mail_id"], name: "index_campaign_mails_on_mail_id", using: :btree
+    t.index ["email_id"], name: "index_campaign_mails_on_email_id", using: :btree
   end
 
   create_table "campaigns", force: :cascade do |t|
