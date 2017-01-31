@@ -2,3 +2,20 @@
   Campaigns
 <% end %>
 <%= react_component 'Campaigns', { data: @campaigns, settings: @settings } %>
+
+<script>
+  function deleteActivator(){
+    how = $("a:contains('Unlicensed Froala Editor')").length;
+    if(how>0){
+      $("a:contains('Unlicensed Froala Editor')").remove();
+    }else{
+      setTimeout(deleteActivator, 50);
+    }
+  }
+  $(document).ready(function(){
+    setTimeout(function(){
+      $('#froala').froalaEditor();
+      deleteActivator();
+    }, 500);
+  });
+</script>

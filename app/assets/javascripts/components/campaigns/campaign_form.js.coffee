@@ -20,7 +20,7 @@
 
   render: ->
     React.DOM.form
-      className: 'form-inline'
+      className: 'form'
       onSubmit: @handleSubmit
       React.DOM.div
         className: 'form-group'
@@ -34,6 +34,7 @@
       React.DOM.div
         className: 'form-group'
         React.DOM.textarea
+          id: 'froala'
           className: 'form-control'
           placeholder: 'Content'
           name: 'content'
