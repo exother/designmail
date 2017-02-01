@@ -12,10 +12,17 @@
       setTimeout(deleteActivator, 50);
     }
   }
+
+  function updateFroala(){
+    $('#contentInput').val($('#froala').froalaEditor('html.get'))
+    setTimeout(updateFroala, 100);
+  }
+
   $(document).ready(function(){
     setTimeout(function(){
       $('#froala').froalaEditor();
       deleteActivator();
+      updateFroala();
     }, 500);
   });
 </script>

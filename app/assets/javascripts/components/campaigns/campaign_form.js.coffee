@@ -2,6 +2,9 @@
   getInitialState: ->
     name: ''
     content: ''
+    subject: ''
+    from_name: ''
+    from_email: ''
     setting_id: null
 
   handleChange: (e) ->
@@ -13,6 +16,9 @@
 
   handleSubmit: (e) ->
     e.preventDefault()
+    @state.content = $('#contentInput').val()
+    console.log @state.content
+    console.log $('#contentInput').val()
     $.post '', { campaign: @state }, (data) =>
       @props.handleNewCampaign data
       @setState @getInitialState()
@@ -33,10 +39,40 @@
           onChange: @handleChange
       React.DOM.div
         className: 'form-group'
+        React.DOM.input
+          type: 'text'
+          className: 'form-control'
+          placeholder: 'Subject'
+          name: 'subject'
+          value: @state.subject
+          onChange: @handleChange
+      React.DOM.div
+        className: 'form-group'
+        React.DOM.input
+          type: 'text'
+          className: 'form-control'
+          placeholder: 'From (name)'
+          name: 'from_name'
+          value: @state.from_name
+          onChange: @handleChange
+      React.DOM.div
+        className: 'form-group'
+        React.DOM.input
+          type: 'text'
+          className: 'form-control'
+          placeholder: 'From (email)'
+          name: 'from_email'
+          value: @state.from_email
+          onChange: @handleChange
+      React.DOM.div
+        className: 'form-group'
         React.DOM.textarea
           id: 'froala'
           className: 'form-control'
           placeholder: 'Content'
+        React.DOM.input
+          id: 'contentInput'
+          type: 'hidden'
           name: 'content'
           value: @state.content
           onChange: @handleChange
@@ -58,7 +94,6 @@
       React.DOM.button
         type: 'submit'
         className: 'btn btn-primary pull-right'
-        disabled: !@valid()
         'Add campaign'
       React.DOM.div
         className: 'clearfix'

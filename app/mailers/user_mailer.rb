@@ -8,7 +8,7 @@ class UserMailer < ApplicationMailer
     @campaign = campaign
     @user = user
     @setting = campaign.setting
-    mail(to: user.email, subject: 'test')
+    mail(to: user.email, subject: @campaign.subject, from: "#{@campaign.from_name} <#{@campaign.from_email}>")
   end
 
   private

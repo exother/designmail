@@ -11,6 +11,8 @@
   render: ->
     React.DOM.tr null,
       React.DOM.td null, @props.campaign.name
+      React.DOM.td null, @props.campaign.subject
+      React.DOM.td null, "#{@props.campaign.from_name} (#{@props.campaign.from_email})"
       React.DOM.td null, @props.campaign.content
         React.DOM.td null,
           React.DOM.a

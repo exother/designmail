@@ -26,6 +26,8 @@
         React.DOM.thead null,
           React.DOM.tr null,
             React.DOM.th null, 'Name'
+            React.DOM.th null, 'Subject'
+            React.DOM.th null, 'From'
             React.DOM.th null, 'Content'
             React.DOM.th null, 'Actions'
         React.DOM.tbody null,

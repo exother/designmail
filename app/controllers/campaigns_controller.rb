@@ -23,6 +23,6 @@ class CampaignsController < ApplicationController
   private
 
   def campaign_params
-    params.require(:campaign).permit(:name, :content, :setting_id)
+    params.require(:campaign).permit(:name, :content, :setting_id, :subject, :from_name, :from_email)
   end
 end

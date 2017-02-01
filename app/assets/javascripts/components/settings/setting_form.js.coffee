@@ -21,7 +21,7 @@
 
   render: ->
     React.DOM.form
-      className: 'form-inline'
+      className: 'form'
       onSubmit: @handleSubmit
       React.DOM.div
         className: 'form-group'
@@ -62,5 +62,4 @@
       React.DOM.button
         type: 'submit'
         className: 'btn btn-primary'
-        disabled: !@valid()
         'Add setting'
