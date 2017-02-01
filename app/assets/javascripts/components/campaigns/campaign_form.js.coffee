@@ -19,7 +19,7 @@
     @state.content = $('#contentInput').val()
     console.log @state.content
     console.log $('#contentInput').val()
-    $.post '', { campaign: @state }, (data) =>
+    $.post '/campaigns', { campaign: @state }, (data) =>
       @props.handleNewCampaign data
       @setState @getInitialState()
     , 'JSON'

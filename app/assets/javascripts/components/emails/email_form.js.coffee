@@ -25,7 +25,7 @@
     if @multipleSelect()
       data = new FormData
       data.append('file', $('#fileSelector').get(0).files[0])
-      $.ajax '', {
+      $.ajax '/emails', {
         contentType: false
         data: data
         processData: false
@@ -37,7 +37,7 @@
       }
 
     else
-      $.post '', { email: @state }, (data) =>
+      $.post '/emails', { email: @state }, (data) =>
         @props.handleNewEmail data
         @setState @getInitialState()
       , 'JSON'

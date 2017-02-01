@@ -14,7 +14,7 @@
 
   handleSubmit: (e) ->
     e.preventDefault()
-    $.post '', { setting: @state }, (data) =>
+    $.post '/settings', { setting: @state }, (data) =>
       @props.handleNewSetting data
       @setState @getInitialState()
     , 'JSON'
