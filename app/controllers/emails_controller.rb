@@ -4,12 +4,17 @@ class EmailsController < ApplicationController
   end
 
   def create
-    @email = Email.new(email_params)
-
-    if @email.save
-      render json: @email
+    if params[:file]
+      created_emails = Email.create_from_csv(params[:file].path)
+      render json: created_emails
     else
-      render json: @email.errors, status: :unprocessable_entity
+      @email = Email.new(email_params)
+
+      if @email.save
+        render json: @email
+      else
+        render json: @email.errors, status: :unprocessable_entity
+      end
     end
   end
 

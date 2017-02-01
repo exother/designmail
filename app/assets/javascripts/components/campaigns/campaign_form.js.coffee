@@ -40,21 +40,25 @@
           name: 'content'
           value: @state.content
           onChange: @handleChange
-      React.DOM.select
+      React.DOM.div
         className: 'form-group'
-        name: 'setting_id'
-        value: @state.setting_id
-        onChange: @handleChange
-        React.DOM.option
-          disabled: true
-          selected: true
-          'Select setting'
-        for setting in @props.settings
+        React.DOM.select
+          className: 'form-control'
+          name: 'setting_id'
+          value: @state.setting_id
+          onChange: @handleChange
           React.DOM.option
-            value: setting.id
-            setting.name
+            disabled: true
+            selected: true
+            'Select setting'
+          for setting in @props.settings
+            React.DOM.option
+              value: setting.id
+              setting.name
       React.DOM.button
         type: 'submit'
-        className: 'btn btn-primary'
+        className: 'btn btn-primary pull-right'
         disabled: !@valid()
         'Add campaign'
+      React.DOM.div
+        className: 'clearfix'
