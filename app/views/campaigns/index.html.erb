@@ -1,7 +1,7 @@
 <% content_for :subtitle do %>
   Campaigns
 <% end %>
-<%= react_component 'Campaigns', { data: @campaigns, settings: @settings } %>
+<%= react_component 'Campaigns', { data: @campaigns, settings: @settings, emails_processed: @emails_processed } %>
 
 <script>
   function deleteActivator(){

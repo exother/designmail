@@ -1,6 +1,7 @@
 @Campaigns = React.createClass
   getInitialState: ->
     campaigns: @props.data
+    emails_processed: @props.emails_processed
 
   getDefaultProps: ->
     campaigns: []
@@ -29,7 +30,8 @@
             React.DOM.th null, 'Subject'
             React.DOM.th null, 'From'
             React.DOM.th null, 'Content'
+            React.DOM.th null, 'State'
             React.DOM.th null, 'Actions'
         React.DOM.tbody null,
           for campaign in @state.campaigns
-            React.createElement Campaign, key: campaign.id, campaign: campaign, handleDeleteCampaign: @deleteCampaign
+            React.createElement Campaign, key: campaign.id, campaign: campaign, handleDeleteCampaign: @deleteCampaign, emails_processed: @state.emails_processed[campaign.id]

@@ -2,6 +2,7 @@ class CampaignsController < ApplicationController
   def index
     @campaigns = Campaign.all
     @settings = Setting.all
+    @emails_processed = Campaign.emails_processed
   end
 
   def create

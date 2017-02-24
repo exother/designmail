@@ -14,8 +14,9 @@
       React.DOM.td null, @props.campaign.subject
       React.DOM.td null, "#{@props.campaign.from_name} (#{@props.campaign.from_email})"
       React.DOM.td null, @props.campaign.content
-        React.DOM.td null,
-          React.DOM.a
-            className: 'btn btn-danger'
-            onClick: @handleDelete
-            'Delete'
+      React.DOM.td null, "#{@props.emails_processed.processed}/#{@props.emails_processed.all}"
+      React.DOM.td null,
+        React.DOM.a
+          className: 'btn btn-danger'
+          onClick: @handleDelete
+          'Delete'
