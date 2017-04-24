@@ -9,8 +9,7 @@ class Email < ApplicationRecord
     file.each_line do |email|
       email.strip!
       new_mail = Email.new email: email
-      if new_mail.valid?
-        new_mail.save
+      if new_mail.save
         created_emails << new_mail
       end
     end
