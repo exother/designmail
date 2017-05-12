@@ -22,6 +22,6 @@ class SettingsController < ApplicationController
   private
 
   def setting_params
-    params.require(:setting).permit(:name, :host, :user, :password)
+    params.require(:setting).permit(:name, :host, :user, :password, :port)
   end
 end

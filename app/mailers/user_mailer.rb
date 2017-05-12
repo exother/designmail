@@ -15,9 +15,9 @@ class UserMailer < ApplicationMailer
 
   def set_delivery_setting
     mail.delivery_method.settings = {
-        authentication: :cram_md5,
+        authentication: :plain,
         address: @setting.host,
-        port: 2525,
+        port: @setting.port,
         domain: "dotd.pl",
         user_name: @setting.user,
         password: @setting.password,

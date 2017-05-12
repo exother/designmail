@@ -1,5 +1,6 @@
 @SettingForm = React.createClass
   getInitialState: ->
+    port: ''
     host: ''
     user: ''
     password: ''
@@ -40,6 +41,15 @@
           placeholder: 'Host'
           name: 'host'
           value: @state.host
+          onChange: @handleChange
+      React.DOM.div
+        className: 'form-group'
+        React.DOM.input
+          type: 'text'
+          className: 'form-control'
+          placeholder: 'Port'
+          name: 'port'
+          value: @state.port
           onChange: @handleChange
       React.DOM.div
         className: 'form-group'

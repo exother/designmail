@@ -27,6 +27,7 @@
           React.DOM.tr null,
             React.DOM.th null, 'Name'
             React.DOM.th null, 'Host'
+            React.DOM.th null, 'Port'
             React.DOM.th null, 'User'
             React.DOM.th null, 'Password'
             React.DOM.th null, 'Actions'

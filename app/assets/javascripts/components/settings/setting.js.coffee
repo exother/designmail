@@ -14,6 +14,7 @@
       React.DOM.td null, @props.setting.host
       React.DOM.td null, @props.setting.user
       React.DOM.td null, @props.setting.password
+      React.DOM.td null, @props.setting.email
       React.DOM.td null,
         React.DOM.a
           className: 'btn btn-danger'
