@@ -86,4 +86,4 @@ production:
   <<: *default
   database: designmail_production
   username: designmail
-  password: <%= ENV['DESIGNMAIL_DATABASE_PASSWORD'] %>
+  password: designmail
