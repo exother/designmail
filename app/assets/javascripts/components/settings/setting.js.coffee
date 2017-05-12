@@ -12,6 +12,7 @@
     React.DOM.tr null,
       React.DOM.td null, @props.setting.name
       React.DOM.td null, @props.setting.host
+      React.DOM.td null, @props.setting.port
       React.DOM.td null, @props.setting.user
       React.DOM.td null, @props.setting.password
       React.DOM.td null, @props.setting.email
