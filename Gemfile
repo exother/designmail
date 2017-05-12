@@ -32,6 +32,8 @@ gem 'react-rails'
 gem "font-awesome-rails"
 gem "wysiwyg-rails"
 
+gem 'whenever', require: false
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
