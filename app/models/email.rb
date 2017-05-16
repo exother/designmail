@@ -4,7 +4,7 @@ class Email < ApplicationRecord
   validates_format_of :email,:with => /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
 
   def self.create_from_csv(file_path)
-    file = File.open(file_path, 'r')
+    file = File.open(file_path, 'r:ISO-8859-1')
     created_emails = []
     file.each_line do |email|
       email.strip!
